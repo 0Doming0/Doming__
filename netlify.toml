@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/*"
   to = "/restaurant/restaurantManager/cardápio/index.html"
-  status = 200
+  status = 301
