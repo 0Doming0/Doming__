@@ -76,3 +76,81 @@
   </body>
 
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <meta name='viewport' content='width=device-width'/>
+    <title>Registre seu restaurante fácil</title>
+    <link rel='stylesheet' type='text/css' href="styles.css"/>
+</head>
+
+
+  <body>
+    
+    <div class="titleRegister_block"><h2>Registre seu restaurante<br></h2><strong>Comece um novo início em seu negócio</strong></div>
+    
+    <div class="mainRegister_block"><h1>Crie seu espaço aqui</h1>
+    
+        <ul style="background-color:rgba(197, 248, 138, 0.616);height:95px;">
+            <form action='/registrarRestaurant' id='formulário' onsubmit='formulário_submit()' method='post'>
+            <input type="text" name='nameRestaurant' placeholder="Nome do restaurante">
+            <input type="text" name='cnpjRestaurant' placeholder="CNPJ">
+            
+        </ul> 
+            
+        
+    </div>
+        
+    <div class="mainRegister_block"></div>
+    
+    <div class="mainInformation_block">
+     <li><a href="templates/qrCode Página.html">Veja o que a <strong>Doming</strong> oferece</a></li>
+
+    </div>
+        Informações-desing
+    
+    <div class="mainSelector_block">head Seletor
+    <ul>
+        <li><h3>Principal</h3></li>
+        <li><h3>Doming Serviço</h3></li>
+    </ul>
+     <div style="margin:30px"><strong>Viaje pelas página</strong></div>
+    </div>
+
+    <div class="domingInfo_block"><h1 style="margin-inline:120px;background-color:rgb(0, 0, 0);color:white;">Doming</h1><h3>Eleve seu negócio com <br><strong class="textDoming">Doming</strong><br><br>Use nosso serviço e organize e automatize seu estabelecimento</h3>
+    </div>
+
+<script>
+    lr=document.getElementById('formulário');
+        lr.addEventListener('submit', function(event){
+          event.preventDefault();
+        })
+    function formulário_submit(){
+        restaurant=lr.querySelector("input[name='nameRestaurant']").value;
+        cnpj=lr.querySelector("input[name='cnpjRestaurant']").value;
+        
+        dados={
+            "restaurant":restaurant,
+            "cnpj":cnpj
+        }
+        fetch('/verificar-registro',{
+            method:"POST",
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(dados)
+        })
+        .then(resposta =>resposta.json())
+        .then(resultado =>{
+            if(resultado["settings"][0])lr.submit();
+            else console.log(resultado["settings"][1])
+        })
+        .catch(error=>console.error('Ocorreu um erro',error))
+
+    }
+</script>
+
+  </body>
+
+</html>
