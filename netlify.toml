@@ -6,4 +6,5 @@
 [[redirects]]
   from = "/:restaurant/restaurantManager/:classe"
   to = "/restaurant/restaurantManager/:classe/index.html?restaurant=:restaurant"
-  status = 200
+  status = 301
+  force = true
