@@ -3,8 +3,8 @@
   to = "/restaurant/restaurantManager/:classe/index.html?restaurant=:restaurant"
   status = 301
   force = true
-  
+
 [[redirects]]
-  from = "/*"
+  from = "/"
   to = "/restaurant/restaurantManager/cardápio/index.html"
   status = 301
