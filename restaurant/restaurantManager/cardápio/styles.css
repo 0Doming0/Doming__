@@ -1,0 +1,126 @@
+@import url('../mesas/styles.css');
+
+section{
+    display:flex;
+    
+}
+section div[name="border"]{
+    position:absolute;
+    width:calc(100vw * 0.8);
+    margin-left:calc(100vw * 0.1);
+    margin-top:10px;
+    height:500px;
+    border:1px solid black;
+    border-radius:7px;
+}section div[name="border"] div[name="border-width"]{
+    --border-width:10px;
+   
+    height:calc(100% - var(--border-width) * 2);
+    border-top:var(--border-width) solid gray;
+    border-radius:7px;
+    
+}
+section div[name="border"] div h3:nth-child(1){
+    margin-top:0;
+    margin-left:10px;
+    translate:0 35%;
+}
+section div[name="border"] h3[name="informação-animat"]{
+    position:relative;
+    top:20px;
+    width:100%;
+    font-size:12px;
+    text-align:center;
+
+}
+section div[name="border"] div button[name="adicionar-produto"]{    
+    width:calc(100%);
+    padding:10px;
+    color:white;
+    font-weight:600;
+    text-align:center;
+    background-color:rgba(51, 237, 34, 0.893);
+    border:1px dotted black;
+}
+
+section div[name="border"] div ul{
+    padding:6px 3px;
+    text-align:initial;
+}section div[name="border"] div ul li{
+    padding:50px 0 0 0;
+    list-style:none;
+    margin:0;
+    width:100%;
+}section div[name="border"] div ul li:first-child{
+    padding:0;
+}section div[name="border"] div ul li span[name="nome"]{
+    margin-left:10px;
+}section div[name="border"] div ul li span[name="valor"]{
+    position:absolute;
+    left:80%;
+    font-size:3vw;
+    margin-left:10px;
+}
+section div[name="border"] div ul li div{
+    translate:0 10px;
+    width:50%;
+}
+section div[name="border"] div ul li button{
+    height:30px;
+    color:gray;
+    background-color:white;
+    width:calc(45%);
+    text-align:start;
+    border:none;
+    border-width:1px;
+    border-left-color:black;
+    border-left-style:dotted;
+    text-decoration:underline;
+}section div[name="border"] div ul li button:hover{
+    color:blue;
+    border-color:blue;
+    cursor:pointer;
+}section div[name="border"] div ul li button[name="pause"]{
+    margin-left:10px;
+}
+section div[name="border"] div ul li .line-separator{
+    position:relative;
+    top:25px;
+    width:30%;
+    height:2px;
+    border-radius:3px;
+    margin-left:50%;
+    translate: -50% 0;
+    background-color:rgba(138, 138, 138, 0.223);
+}
+#pag_adicionar-produto{
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:100%;
+    height:50%;
+    background-color:white;
+    position:absolute;
+    left:50%;
+    top:50%;
+    translate:-50% -50%;
+}
+#pag_adicionar-produto h3{
+    margin:5px;
+}
+#pag_adicionar-produto textarea, #pag_adicionar-produto input{
+    margin-left:10px;
+    width:30%;
+}#pag_adicionar-produto textarea:focus, #pag_adicionar-produto input:focus{
+    outline:none;
+}#pag_adicionar-produto div[name="descricao"]{
+    display:flex;
+}#pag_adicionar-produto div[name="descricao"] div{
+    margin:7px;
+    height:50px;
+
+}
+#pag_adicionar-produto button{
+    background-color:rgb(30, 184, 30);
+    border:1px solid black;
+}

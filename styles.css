@@ -1,0 +1,55 @@
+body{
+    background-color:white;
+    text-align:center;
+}
+.titleRegister_block{
+    margin-inline:385px;border-right:2px solid rgba(83, 124, 56, 0.137);border-left:2px solid rgba(83, 124, 56, 0.137);
+}
+.domingInfo_block{
+    position:absolute;left:69.8%;top:0;height:385px;width:385px;font-family:monospace, monaco;
+}
+.mainSelector_block{
+    background-color:rgb(190, 187, 187);position:fixed;top:0;width:20%;height:100%;
+}
+.mainRegister_block{
+    margin-inline: 30%;margin-top:50px;
+    border:2px dotted rgba(212, 59, 13, 0.171);border-top-style:dotted;border-radius:7px;
+    background-color:rgba(253, 253, 213, 0.301);height:400px;
+}
+.mainInformation_block{
+    margin-top:25px;display:flex;justify-content:center;align-items:center;
+    background:linear-gradient(0deg,rgba(165, 206, 122, 0.76),rgb(253, 253, 213));
+    background-color:rgb(255, 255, 255);
+    height:75px;
+}
+.mainInformation_block li{
+    list-style-type:none;
+}
+.mainSelector_block li{
+    height:50px;background-color:black;border:2px solid red;color:white;text-align:center;
+    
+}
+.textDoming{
+    color:rgb(163, 206, 83);
+}
+a{text-decoration:none;color:black;}
+a:link{
+color:black
+}
+
+div h1{
+   
+}
+div ul{
+    margin:2px;text-align:start;
+}
+li input{
+    background-color:rgb(248, 248, 246);height:25px;text-align:center;margin-top:10px;
+    border-radius:4px;border-width:0px;
+}
+.mainRegister_block ul li{
+    list-style-type:none;
+}
+#formulário{
+    margin:0;
+}
