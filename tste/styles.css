@@ -1,0 +1,61 @@
+@import url('../mesas/styles.css');
+body,html{
+    height:200%;
+}
+section{
+    margin:0;
+    height:50%;
+}
+section div{
+    display:flex;
+    flex-direction:column;
+}
+section li{
+    margin:5px;
+    height:80px;
+    display:flex;
+    align-items:center;
+    background-color:rgb(226, 229, 226);
+    border-radius:7px;
+}
+section li h3{
+    margin:10px;
+}
+section li h3[name="pedido"]::after{
+    content:'>';
+    position:absolute;
+    right:20px;
+    line-height:20px;
+    font-size:24px;
+    color:white;
+}
+section li h3[name="valor"]{
+    font-size:15px;
+}
+section li:focus{
+    background-color:rgb(255, 255, 255);
+    border:1px solid black;
+}
+#pedido_information{
+    display:none;
+    padding:10px;
+    background-color:rgb(255, 255, 255);
+    width:90%;
+    height:280px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-color:black;
+    border-width:2px;
+    position:fixed;
+    left:50%;
+    bottom:0%;
+    animation:slin 0.7s ease forwards;
+}
+@keyframes slin{
+    from{
+       transform:translate(-50%,100%);
+    }
+    to{
+       transform:translate(-50%,0%);
+    }
+}
