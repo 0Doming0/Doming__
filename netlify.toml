@@ -1,0 +1,5 @@
+[[redirects]]
+from = "/*"
+to = "/restaurantManager/cardápio/index.html"
+force = true
+status = 200
