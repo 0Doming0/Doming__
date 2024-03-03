@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Pagamento a Lacro</title>
+    </head>
+   <body>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.js"></script>
+    <h3>Esperando pagamento</h3>
+    <div style="text-align:center;">
+    <img width="100px" id="img"/>
+    <div id="qrcode"></div>
+    </div>
+   </body>
+<script type="module">
+const qrcode_image= document.getElementById("img"); 
+
+const chave = "21969651131";
+
+import Pix from "/restaurant/client-payment/Pix.js";
+const pix = new Pix(
+    "20091441714",
+    "Doming-Service",
+    "Vitor Domingos",
+    "Rio de Janeiro",
+    "Z992",
+    0.5,
+);
+const payload = pix.getPayload();
+document.getElementById("qrcode").textContent= payload;
+
+function generateQRCode(payload) {
+  const qr = qrcode(0, 'M');
+  qr.addData(payload);
+  qr.make();
+  const base64QRCode = qr.createDataURL(8, 0);
+  return base64QRCode;
+}
+const qrCodeBase64 = generateQRCode(payload);
+qrcode_image.src = qrCodeBase64;
+</script>
+</html>

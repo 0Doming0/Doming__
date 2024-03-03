@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+ <head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <meta name="author" content="Doming"/>
+  <meta name="keywords" content="cardápio,cardapio digital,criar cardapio digital,mesa digital,restaurante,vender com cardapio digital,mesa digital para restaurante,plataforma de venda"/>
+  <meta name="robots" content="noindex,follow,noodp"/>
+  <meta name="description" content="Gerencie todas as mesas do seu negócio"/>
+    <title>Meu negócio</title>
+    
+    <link rel="stylesheet" href="styles.css">
+ </head>    
+  <body>
+ <section name = "main" class = "section-page">
+   <div name = "0" class = "box mesa-main" onclick = "mesa_focus(this)">
+    <p name = "title">Mesa 1</p>
+    <div class = "line_separator"></div>
+    <p name = "cliente">Juliana Mendes</p>
+  </div>
+</section> 
+<section class = "section-info">
+  <!-- <h4>Atenda as chamadas dos clientes nas mesas</h4> -->
+  <h4 id = "main-info">Comece seu negócio Doming criando uma mesa</h4>
+</section>
+<div class = "line_separator"></div>
+<section id = "create_mesa">
+<form id = "formulário_add">
+  <label>Nome da mesa:
+   <input type = "text" placeholder = "Mesa 1">
+  </label>
+  <br>
+  <input type = "submit" value = "Integre nova mesa">
+</form>
+<h4>Crie uma nova mesa para o negócio</h4>
+</section>
+<div class = "mesa-container_info"><a name = "options"onclick = "expandir_recolher(this)" class = "active_button"></a>
+  Info da mesa atual
+  <p>Clientes parecem satisfeitos</p>
+</div>
+<a href = "/restaurant/restaurantManager/main/index.html" id = "icon-configuration">
+    
+</a>
+  <header>
+    <a name = "options"onclick = "expandir_recolher(this)" class = "active_button"></a>
+    <section name = "main">
+    <div class = "page_main" name = "pages-main">
+    <a href = "/restaurant/restaurantManager/cardápio"><img src = "https://th.bing.com/th?id=OIP.RnTUn1ifUKInjnOWN70V-AHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
+    <span>Cardápio</span>
+    </a>
+    <div class = "line_separator"></div>
+    <a href = "/restaurant/restaurantManager/pedidos"><img name = "pedidos" src = "/static/Sem título.png">
+    <span>Pedidos</span>
+    </a>
+    <div class = "line_separator"></div>
+    <a class = "active" href = "/restaurant/restaurantManager/mesas"><img name = "mesas" src = "https://th.bing.com/th?id=OIP.x90ERrGDs5DxuTtF3b1-lAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
+    <span>Mesas</span>
+    </a>
+    <a class = "box"><img name = "clientes" src = "/static/Doming Icon client.png">
+      <h4>3 clientes</h4>
+    </a>
+    </div>
+    <div class = "page_main" name = "manager-main">
+      <input type = "text" placeholder = "Nome do negócio"/>
+      <input type = "text" name = "number" placeholder = "Número de contato"/>
+    </div>
+  </section>
+    <div name = "class">Estatísticas</div>
+    <div name = "class">Clientes no restaurante</div>
+  </header>
+  <script>
+    let execução = false
+    function mesa_focus (main) {
+      container = document.getElementsByClassName("mesa-container_info")[0]
+      container.style.display = "block"
+      main.classList.toggle("mesa-main_focus")
+      if (main.classList.contains("mesa-main_focus")) 
+        Array.from(main.parentNode.children).forEach((elemento) => {
+          if (elemento != main)
+           if (elemento.classList.contains("mesa-main_focus"))
+             elemento.classList.remove("mesa-main_focus")
+        })
+      container.querySelector ("a[name='options']").classList.add("active_button")
+      container.querySelector ("a[name='options']").style.border = "none"
+      if (execução) return
+      if (container.classList.contains("active-container")) {
+        container.classList.remove("active-container")
+        container.classList.add("disable-container")
+      }
+      else {
+        container.classList.add("active-container")
+        container.classList.remove("disable-container")
+      }
+      execução = true
+      setTimeout(() => {
+        execução=false
+        if (main.classList.contains("mesa-main_focus")) {
+          container.classList.add("active-container")
+          container.classList.remove("disable-container")
+        }
+        else {
+          container.classList.remove("active-container")
+          container.classList.add("disable-container")
+        }
+      }, 400) 
+  }
+    
+  </script>
+  <script src="scripts.js" type = "module"></script>
+  <script src = "/static/resources/scripts-manager.js"></script>
+  </body>
+
+
+<html>

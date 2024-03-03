@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset = "utf-8"/>
+   <meta name = "author" content = "Doming"/>
+   <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+   <title>Adicione um item a Sopas</title>
+   <link rel= "stylesheet" href= "styles.css">
+  </head>
+  <body>
+   <main><h3>Adicione o item</h3></main>
+   <form class = "box" action = "/restaurant/restaurantManager/adicionar/cardápio" autocomplete="off" method="get">
+    <div name = "image"></div>
+    <div name = "inputs">
+    <input type = "text" name = "nome" placeholder="Nome do produto"/>
+    <input type = "text" pattern="[0-9]+([\.,][0-9]+)?" title = "Digite um valor numérico:" name = "valor" placeholder="Valor do produto"/>
+    <input type = "text" name = "cat" style="display:none"/>
+    </div>
+    <textarea placeholder = "Crie uma descrição do produto"></textarea>
+    <input type = "submit"/>
+   </form>
+   <div id = "container-info">
+    Informações sobre campo de texto
+   </div>
+  <script src = "scripts.js"></script>
+  </body>
+</html>

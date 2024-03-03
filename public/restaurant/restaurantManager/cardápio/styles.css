@@ -1,0 +1,192 @@
+@import url(/static/resources/styles-manager.css);
+:root{
+    --dotted-color:rgba(0, 0, 0, 0.394);
+    --green-color:rgb(23, 180, 23);
+    --blue-color:rgb(25, 146, 245);
+}
+body,html{
+    overflow:hidden;
+    padding:0;
+    margin:0;
+}
+a{
+    color:black;
+    padding:0;
+    text-decoration:none;
+}
+#pag_adicionar-catálogo{
+    display:none;
+    text-align:center;
+    background-color:white;
+}
+#main_cardápio { margin:20px }
+#main_cardápio button{ margin:10px }
+#main_cardápio button:focus{ border-color:gray }
+#main_cardápio div[name = "catálogos"]{
+    display:flex;
+    justify-content:space-evenly;
+    width:100%;
+    padding:5px;
+}
+#main_cardápio div[name = "catálogos"] li{
+    list-style-type:none;
+    cursor:pointer;
+    color:rgba(0, 0, 0, 0.748);
+    background-color:rgba(55, 55, 55, 0.089);
+    border-radius:0.2rem;
+    padding:0 5px;
+}
+#main_cardápio div[name = "catálogos"] li:focus{
+    background-color:var(--green-color);
+    color:white;
+}
+#page_cardápio{
+    display:flex;
+    justify-content:space-around;
+    position:relative;
+    left:0;
+    width:300%;
+}
+#page_cardápio ul{
+    margin:0;
+    padding:0;
+    width:calc(100% / 3);
+    display:block;
+}
+#page_cardápio li{
+    display:none;
+    list-style:none;
+    margin:10px;
+    height:75px;
+    justify-content:space-around;
+    align-items:center;
+}#page_cardápio li[name = "adicionar-item"]{
+    display:flex;
+    cursor:pointer;
+    width:50%;
+    height:30px;
+    border-radius:5px;
+    border:1px solid rgba(0, 0, 0, 0.145);
+    position:relative;
+    left:50%;
+    transform: translateX(-50%);
+    text-align:center;
+}
+#page_cardápio li[name = "adicionar-item"] h4{
+    margin:4px;
+    font-weight:500;
+    color:rgba(0, 0, 0, 0.49);
+    width:100%;
+    text-align:center;
+}
+#page_cardápio li div[name = "img"]{
+    border:1px dotted rgb(0, 42, 255);
+    width:60px;
+    height:60px;
+    font-size:12px;
+    text-align:center;
+}
+#page_cardápio li div[name = "informação"]{
+    display:flex;
+    flex-direction:column;
+    border:none;
+    padding:0;
+    margin:10px;
+    text-align:start;
+}#page_cardápio li div[name = "informação"] h4{
+    margin:0;
+}
+#page_cardápio li div[name = "informação"] span{
+    position:relative;
+    top:10px;
+}
+#page_cardápio li div[name = "status"]{
+    width:15%;
+    height:60%;
+}
+#page_cardápio li div[name = "status"] button{
+    width:100%;
+    height:50%;
+    padding:0;
+    display:flex;
+    align-items:center;
+    border:none;
+    cursor:pointer;
+    background-color:white;
+}#page_cardápio li div[name = "status"] div{
+    background-color:black;
+}
+#page_cardápio li div[name = "status"] div[name = "body"]{
+    width:100%;
+    height:2px;
+    background-color:rgba(0, 0, 0, 0.363);
+    margin:0;
+    padding:0;
+}
+#page_cardápio li div[name = "status"] div[name = "point"]{
+    width:30%;
+    height:0;
+    padding-bottom:30%;
+    border-radius:50%;
+    background-color:white;
+    outline:2px solid rgb(180, 180, 180);
+    margin:0;
+    position:relative;
+    bottom:350%;
+    left:0%;
+}
+#pag_adicionar-catálogo{
+    position:absolute;
+    left:50%;
+    top:50%;
+    translate: -50% -50%;
+    width:80%;
+    height:0;
+    padding-bottom:80%;
+    background-color:red;
+}#pag_adicionar-catálogo input{
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    display:block;
+}
+#pag_adicionar-catálogo input:focus{
+    outline:none;
+    border-color:var(--green-color)
+}
+#pag_adicionar-produto{
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:100%;
+    height:50%;
+    background-color:white;
+    position:absolute;
+    left:50%;
+    top:50%;
+    translate:-50% -50%;
+}
+#pag_adicionar-produto h4{
+    margin:5px;
+}
+#pag_adicionar-produto textarea, #pag_adicionar-produto input{
+    margin-left:10px;
+    width:30%;
+}#pag_adicionar-produto textarea:focus, #pag_adicionar-produto input:focus{
+    outline:none;
+}#pag_adicionar-produto div[name="descricao"]{
+    display:flex;
+}#pag_adicionar-produto div[name="descricao"] div{
+    margin:7px;
+    height:50px;
+
+}
+#pag_adicionar-produto button{
+    background-color:rgb(30, 184, 30);
+    border:1px solid black;
+    width:30%;
+    position:relative;
+    left:100%;
+    translate:-100% 0;
+    cursor:pointer;
+}

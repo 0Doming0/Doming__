@@ -1,0 +1,33 @@
+@import url(/static/resources/styles-manager.css);
+body {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding: 0 0 14rem 0;
+}
+#qrCODE {
+    margin-top: 10%;
+    border: 1px solid black;
+    height:40vw;
+    width: 40vw;
+}
+h4 {
+    margin:5%;
+}
+.line_separator {
+    height:1px;
+    width: 95%;
+    border-top: 2px dotted var(--dotted-color);
+}
+.container-section {
+    padding:1rem 0;
+    text-align:center;
+    width: 100%;
+}.container-section .container-lista {
+    display: flex;
+    flex-wrap:nowrap;
+}.container-lista div {
+    border: 1px solid black;
+    height:50px;
+    width:33.3%;
+}

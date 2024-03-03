@@ -1,0 +1,19 @@
+{
+  "name": "doming",
+  "version": "0.5.0",
+  "description": "Web App for restaurant ",
+  "main": "index.js",
+  "scripts": {
+    "start": "netlify dev",
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "author": "Vitor Domingos",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "firebase": "^10.8.1"
+  },
+  "keywords": [
+    "restaurant"
+  ]
+}

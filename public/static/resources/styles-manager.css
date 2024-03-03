@@ -1,0 +1,288 @@
+:root{
+    --dotted-color:rgba(0, 0, 0, 0.394);
+    --green-color:rgb(27, 205, 27);
+    --blue-color:rgb(25, 146, 245);
+    --title-color:rgba(0, 0, 0, 0.608);
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+p {
+    margin: 0;
+}
+h4 {
+    margin: 0
+}
+.box {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.418);
+    padding: 10px 0;
+}
+.main-page{
+    height:45px;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-bottom:1px solid rgba(0, 0, 0, 0.542);
+}
+.mesa-main {
+    border-radius:0.5rem;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.256);
+    background-color:white; 
+    color:var(--title-color); 
+}.mesa-main p[name = "title"] {
+    font-size:17px
+}.mesa-main p[name = "cliente"] {
+    font-size:14px
+}
+.mesa-main .line_separator{
+    width:auto;
+    border-top: 2px dotted var(--dotted-color);
+    height:1px;
+    margin:10px;
+}
+.mesa-main_focus {
+    color:black;
+    border: 1px solid var(--dotted-color);
+}
+.mesa-main_focus .line_separator{
+    background-color:black;
+    border:none;
+}
+header {
+    position:fixed;
+    bottom: 50px;
+    left:0;
+    width:100%;
+    background-color:white;
+}
+header section {
+    display:flex;
+    flex-direction:row;
+    position:relative;
+    left:-100%;
+    margin:0;
+    justify-content:start;
+    height:65px;
+    width:200vw;
+    border-top:1px solid black;
+    padding:0 0 5px 0;
+    border-bottom:1px dotted var(--dotted-color);
+}
+header .page_main {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    width:100vw;
+    height:100%;
+    gap:0.75rem;
+    font-size:12px;
+    margin:0;
+}
+header .line_separator{
+    background-image:linear-gradient(to bottom, transparent, rgba(128, 128, 128, 0.626), transparent);
+    width:1px;
+    height:75%;
+}
+header h4 {
+    position:relative;
+    right:15px;
+    top:2px;
+    margin:0;
+    white-space:nowrap;
+}
+header a { 
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:end;
+    text-decoration: none;
+    color:black;
+    width:13%;
+    height:100%;
+    gap:0.2rem;
+}
+header img {
+    --width-image:30px;
+    width:var(--width-image);
+    padding: 0 5px 0 0;
+    filter:brightness(115%);
+}
+header img[name = "pedidos"] {
+    width:calc( var(--width-image) - 15px )
+}
+header img[name = "mesas"] {
+    border-radius:50%;
+}
+header img[name = "clientes"] {
+    width:calc( var(--width-image) * 2);
+    border-radius:1rem;
+    padding:0;
+}
+header a:has(>img[name = "clientes"]) {
+    position:relative;
+    left:10%;
+    flex-direction:row;
+    gap:0;
+    width:25%;
+    padding:0;
+    border-radius:0.6rem;
+    /* background-color:rgba(0, 0, 0, 0.113); */
+    background-image:linear-gradient(130deg,yellow,rgb(224, 224, 16));
+    /* background-image:linear-gradient(to right,var(--green-color),green); */
+    height:50%;
+}a[name = "options"] {
+    position:absolute;
+    left:50%;
+    top:-30px;
+    transform: translateX(-50%);
+    width:4.2vh;
+    height:2vh;
+    background-color:white;
+    border-radius:0.8rem;
+    align-items:center;
+    justify-content:center;
+}
+header a[name = "options"] img {
+    position:relative;
+    left:55%;
+    transform:translateX(-50%);
+}
+header div[name = "class"] {
+    border: 1px solid black;
+    height:50px;
+    margin:10px;
+    text-align:center;
+}
+.active_button {
+    animation-name:header_button;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    outline:2px solid var(--green-color);
+}
+@keyframes header_button {
+    from {
+        width:4.2vh;
+        height:2vh;
+        border-radius:0.8rem;
+        top:-30px;
+    }
+    to {
+        width:4vh;
+        height: 4vh;
+        border-radius:50%;
+        top:-45px;
+    }
+}.page_main[name = "pages-main"] {
+    padding:0 5px 0 5px;
+}
+.page_main[name = "manager-main"] {
+    padding:0;
+    margin-left:-12px;
+    display:flex;
+    justify-content:space-around;
+}
+.page_main[name = "manager-main"] input {
+    margin:0;
+    border:none;
+    width:40%;
+    text-align:center;
+    font-size:12px;
+}
+.page_main[name = "manager-main"] input::-webkit-input-placeholder {
+    color:black;
+    font-style: italic;
+}
+.page_main[name = "manager-main"] input:focus {
+    outline:none;
+    border:none;
+    font-style:normal
+}
+.active {
+    color:var(--green-color);
+    font-weight:bold
+}.active  ~ .active img {
+    width:40px;
+}
+
+.header_opening {
+    animation-name:header_opening;
+    animation-duration:0.5s;
+}
+.header_closing {
+    animation-name:header_closing;
+    animation-duration:0.35s;
+    animation-fill-mode:forwards;
+}
+@keyframes header_opening {
+    from {
+        bottom:-136px
+    }
+    to {
+        bottom:-5px
+    }
+}
+@keyframes header_closing {
+    from {
+        bottom:-5px
+    }
+    to {
+        bottom:-136px
+    }
+}
+.mesa-container_info {
+    position:fixed;
+    bottom:69px;
+    left:50%; 
+    margin:0;
+    width:94.5%;
+    height:35%;
+    border: 1px solid rgba(0, 0, 0, 0.583);
+    border-radius:8px;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+    display:none;
+    background-color:white;
+}
+.active-container {
+    animation-name: opening-container_info;
+    animation-duration: 0.3s;
+    animation-fill-mode:forwards;
+}
+.disable-container {
+    animation-name: closing-container_info;
+    animation-duration: 0.2s;
+    animation-fill-mode:forwards;
+}
+@keyframes opening-container_info {
+    from {
+        display:block;
+        transform:translate(-50%,100%);
+    }
+    to {
+        display:block;
+        transform:translate(-50%,0%);
+    }
+}
+@keyframes closing-container_info {
+    from {
+        display:block;
+        transform:translate(-50%,0%);
+    }
+    to {
+        display:none;
+        transform:translate(-50%,100%);
+    }
+}
+#icon-configuration {
+    position:fixed;
+    top:0;
+    left:0;
+    margin:10px;
+    background-color:white;
+    border: 1px solid black;
+    height:40px;
+    width:40px;
+    border-radius:50%;
+}

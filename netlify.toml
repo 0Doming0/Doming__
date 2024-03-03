@@ -1,10 +1,48 @@
+[dev]
+functions = "src/functions"
+publish = "public"
+
+ [[redirects]]
+  from = "/*.js"
+  to = "/:splat.js"
+  status = 200
+  force = true
+  headers = { Content-Type = "application/javascript" }
 [[redirects]]
   from = "/:restaurant/restaurantManager/:classe"
-  to = "/restaurant/restaurantManager/:classe/index.html?restaurant=:restaurant"
+  to = "restaurant/restaurantManager/:classe/index.html?restaurant=:restaurant"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/*"
-  to = "/restaurant/restaurantManager/cardápio/index.html"
+  from = "/"
+  to = "introduction-pages/main"
+  status = 301
+  force=true
+[[redirects]]
+  from = "/:restaurant/restaurantManager/mesas"
+  to = "restaurant/restaurantManager/mesas/index.html"
+  [[redirects]]
+  from = "/:restaurant/restaurantManager/pedidos"
+  to = "restaurant/restaurantManager/pedidos/index.html"
+[[redirects]]
+  from = "/:restaurant/solicitar-pedido"
+  to = ".netlify/functions/" 
+
+[[redirects]]
+  from = "/:restaurant/client-request/:code_mesa"
+  to = "restaurant/client-request/index.html"
+  status = 301 
+[[redirects]]
+  from = "/:restaurant/restaurantManager/cardápio/*"
+  to = "restaurant/restaurantManager/cardápio/adicionar-item/index.html?cat=:splat"
+  status = 301
+[[redirects]]
+  from = "/restaurant/restaurantManager/adicionar/cardápio"
+  to = "restaurant/restaurantManager/cardápio/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/tste/*"
+  to = "tste/:splat"
   status = 301

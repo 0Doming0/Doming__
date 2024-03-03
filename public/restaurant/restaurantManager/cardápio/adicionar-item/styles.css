@@ -1,0 +1,102 @@
+:root{
+    --dotted-color:rgba(0, 0, 0, 0.394);
+    --shadow-color:rgba(0, 0, 0, 0.192);
+    --green-color:rgb(23, 180, 23);
+}
+*{  
+    margin:0;
+    text-align:center;
+}
+body{
+    padding: 0 0 5rem 0;
+}
+main{
+    height:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-bottom:1px dotted rgba(0, 0, 0, 0.301);
+}
+.box { 
+    margin: 20px;
+    padding: 15px 0 0px 0;
+    border: 1px solid var(--dotted-color);
+    border-radius: 8px;
+    box-shadow: 0 0 10px 2px var(--shadow-color);
+}
+form div[name='inputs']{
+    margin:10px;
+    text-align:start;
+}
+form div[name='image']{
+    width:auto;
+    border:1px dotted rgba(0, 0, 0, 0.49);
+    margin:0 20px;
+    padding-bottom:calc(100% - 40px);
+}
+form label{
+    margin:5px;
+    color: var(--dotted-color);
+}
+form textarea{
+    position:relative;
+    left:50%;
+    transform: translateX(-100%);
+    padding:0;
+    height:100px;
+}form textarea:focus{
+    border-width: 1px;
+    outline:none;
+}form textarea:focus::-webkit-input-placeholder {
+    color:transparent;
+}
+form input {
+    display:block;
+    width:40%;
+    border: 2px solid transparent;
+    padding:5px;
+}form input:focus {
+    outline:none;
+    border:1px solid rgba(0, 0, 0, 0.29);
+    border-bottom: 2px solid var(--green-color);
+    border-radius:5px;
+    border-top-right-radius:2px;
+    border-top-left-radius:2px;
+    text-align:start;
+    width:85%;
+}form input:not(:focus) {
+    text-align:start;
+}form input:focus[name = 'valor'] {
+    width:40%;
+}form input:focus::-webkit-input-placeholder {
+    text-align:center;
+    
+}form input:not(:focus)::-webkit-input-placeholder {
+    color:gray;
+    text-align:start;
+}
+form input[type='submit']{
+    display:block;
+    width:auto;
+    position:relative;
+    left:50%;
+    top:10px;
+    translate:-50% 0;
+    color:white;
+    background-color:var(--green-color);
+    border:1px solid var(--dotted-color);
+}
+form input[type='submit']:focus {
+    border-radius:3px;
+    border-color:white;
+    outline:1px solid var(--green-color);
+}
+#container-info{
+    display:none;
+    position:fixed;
+    bottom:0;
+    background-color:white;
+    border:1px solid var(--dotted-color);
+    width:100%;
+    height:50px;
+}

@@ -1,0 +1,185 @@
+@import url(/static/resources/styles-manager.css);
+
+body {
+    text-align:center;
+    padding: 0 0 14rem 0;
+}
+
+.main {
+    position:relative;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-bottom:1px solid var(--dotted-color);
+    color:var(--title-color);
+    margin:-8px 0 0 0;
+    background-color:white;
+    z-index:1;
+}
+.main h3::before{
+    content:"";
+    position:absolute;
+    transform: translateY(8px);
+    left:2rem;
+}
+
+.beforeGray::before {
+    background-color:gray;
+    height:5px;
+    width:5px;
+}
+.beforeGreen {
+    color:black;
+}
+.beforeGreen::before {
+    background-color:var(--green-color);
+    border-radius:50%;
+    width:5px;
+    height:5px;
+}
+main {
+    display:none;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    align-items:center;
+    justify-content:space-evenly;
+    width:13%;
+    margin-right:10px;
+    padding: 0.8rem 0;
+    gap:0.8rem;
+    outline: 1px solid rgba(0, 0, 0, 0.213);
+    border-radius:7px;
+    border-top:2px solid rgba(0, 0, 0, 0.348);
+}
+main button {
+    height:27px;
+    width:27px;
+    border-radius:5px;
+    background-color:var(--dotted-color);
+}
+.destaque {
+    outline-color:var(--green-color);
+    outline-style:solid;
+    outline-width:1px;
+    border-color:var(--green-color);
+    border-radius:7px;
+    animation-name:box-destaque;
+    animation-duration:1.5s;
+    
+}
+@keyframes box-destaque {
+    0% {
+        border-width:0px;
+        outline-width:2px
+    }
+    100% {
+        border-width:1px;
+        outline-width:2px
+    }
+}
+section {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    margin-bottom: 20px;
+    background-color:white;
+}
+
+.page-hide {
+    animation-name:page_hide;
+    animation-duration:0.55s;
+    animation-fill-mode:forwards;
+}
+.page-show {
+    animation-name:page_show;
+    animation-duration:0.55s;
+    animation-fill-mode:forwards;
+}
+@keyframes page_hide {
+    from {
+        transform: translateY(0)
+    }
+    to {
+        transform: translateY(-105%)
+    }
+}
+@keyframes page_show {
+    from {
+        transform: translateY(-105%)
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+.mesa_ocupada {
+    background-color:rgba(24, 132, 233, 0.616);
+}
+section[name = "main"] {gap:0.75rem;}
+section.section-page {display:none;}
+
+.box img {
+    position:relative;
+    width:30%;
+    border-radius:50%;
+}.box div[name = "box-separator"] {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    width:90%;
+    height:100%;
+    padding:5px;
+    border-radius:7px;
+}.box div[name = "box-separator"] p {
+    cursor:pointer;
+}
+#info-title {
+    font-weight:500;
+    display:block;
+}
+.section-info {
+    display:block;
+    height:25px;
+    padding: 0px 0 0 0   
+}
+#create_mesa {
+    display:flex;
+    align-items:center;
+    width: 100vw;
+    height: 30vh;
+    margin-left:-8px;
+    text-align:center;
+    background-image:linear-gradient(to bottom,white,rgba(244, 242, 242, 0.75));
+    border-top:1px dotted var(--dotted-color);
+    border-bottom:1px solid var(--dotted-color);
+    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.142);
+}
+#create_mesa label {
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    padding:10px;
+}
+#create_mesa input {
+    display:block;
+    text-align:center;
+    border:1px solid white;
+}
+#create_mesa form {
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    height:50%;
+    width:100%;
+}
+#create_mesa input[type = "submit"] {
+    background-color:transparent;
+    border:1px solid rgba(0, 0, 0, 0.575);
+    margin: 0 24%;
+    padding:5px;
+    background-color:white;
+}
+#create_mesa h4 {margin:5px;}
+#create_mesa input[type = "text"]:hover{
+    outline:none;
+}

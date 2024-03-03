@@ -1,0 +1,22 @@
+ body{
+   height:200vh;
+ }
+ section{
+   position:sticky;
+   top:20px;
+   background-color:black;
+ }
+ section div[name="white"]{
+   position:absolute;
+   left:50%;
+   top:50%;
+   width:60%;
+   height:60%;
+   translate:-50% -50%;
+   background-color:white;
+}
+ section div{
+   width:50px;
+   height:50px;
+   background-color:red;
+ }

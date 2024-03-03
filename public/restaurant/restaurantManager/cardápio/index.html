@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+ <head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <meta name="author" content="Doming"/>
+  <meta name="keywords" content="cardápio,cardapio digital,criar cardapio digital,mesa digital,restaurante,vender com cardapio digital,mesa digital para restaurante,plataforma de venda"/>
+  <meta name="robots" content="noindex,follow,noodp"/>
+  <meta name="description" content="Gerencie o cardápio do seu negócio"/>
+    <title>Meu negócio</title>
+    
+    <link rel="stylesheet" type='text/css' href="styles.css">
+ </head>    
+<body>
+    <!-- Barra de seleção principal -->
+<div class = "main"><h3>Gerencie seu cardápio</h3></div>
+<section id = "main_cardápio">
+  <div name = "catálogos">
+    <li onclick = "ir_catálogo(this)" tabindex="0">Sopas</li>
+    <li onclick = "ir_catálogo(this)" tabindex="0">Salgadinhos</li>
+    <li onclick = "ir_catálogo(this)" tabindex="0">Pipocas</li>
+  </div>
+</section>
+<section id = "page_cardápio">
+  <ul name = "Sopas">
+    <div name = "page">
+    <li><div name = "img"><span>Adicione uma imagem ao produto</span></div>
+      <a href = "/restaurant/restaurantManager/cardápio/editar-item">
+      <div name = "informação"><h4>Caldo verde</h4>
+        <span>R$ 18.50</span>
+      </div>
+      </a>
+      <div name = "status">
+        <button onclick = "status_item(this,'destaque')">
+          <div name = "body">
+            <div name = "point"></div>
+          </div>
+          <span> destaque</span>
+        </button>
+        <button onclick = "status_item(this,'desativar')">
+          <div name = "body">
+            <div name = "point"></div>
+          </div>
+          <span>desativar</span>
+        </button>
+      </div>
+    </li>
+    <a name = "adicionar-item" href = "/Lacro/restaurantManager/cardápio/0"><li name = "adicionar-item" onclick = "pag_adicionar_item()"><h4>Adicione um item</h4></li></a>
+    </div>
+  </ul>
+  <ul name = "Salgadinhos">
+    <div name = "page">
+    <a href = "/Lacro/restaurantManager/cardápio/1"><li name = "adicionar-item" onclick = "pag_adicionar_item()"><h4>Adicione um item</h4></li></a>
+    </div>
+  </ul>
+  <ul name = "Pipocas">
+    <div name = "page">
+    <a href = "/Lacro/restaurantManager/cardápio/2"><li name = "adicionar-item" onclick = "pag_adicionar_item()"><h4>Adicione um item</h4></li></a>
+    </div>
+  </ul>
+</section>
+
+<div id = "pag_adicionar-catálogo">
+  <input type="text" placeholder="Nome da categoria">
+  <button onclick = ""></button>
+</div>  
+<div id = "pag_adicionar-produto"><h4>Adicione um produto</h4>
+  <input type="text" placeholder="Nome">
+  <div name="descricao">
+  <textarea type="text" placeholder="Descrição" >Os Kurtos kalacs , também chamados de Trdlo, trudel ou chimney cakes , podem se apresentar como doces ou salgados , nosformatos retos, mini ou cone tipo cascão. No mundo todo temos kurtos , com cremes , Nutellaª , sorvetes , queijos , saladas e diversos tipos de carnes. Enviamos aos clientes diversas receitas  e um mini curso de como preparar a massa.</textarea>
+  <div>Coloque imagens a sua descrição</div>
+  </div>
+  <input type="text" placeholder="Nome">
+  <button onclick = "adicionar_produto()">Adicione produto</button>
+</div>
+
+<header>
+  <a name = "options"onclick = "expandir_recolher(this)" class = "active_button"></a>
+  <section name = "main">
+  <div class = "page_main" name = "pages-main">
+  <a class = "active" href = "/restaurant/restaurantManager/cardápio"><img src = "https://th.bing.com/th?id=OIP.RnTUn1ifUKInjnOWN70V-AHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
+  <span>Cardápio</span>
+  </a>
+  <div class = "line_separator"></div>
+  <a href = "/restaurant/restaurantManager/pedidos"><img name = "pedidos" src = "/static/Sem título.png">
+  <span>Pedidos</span>
+  </a>
+  <div class = "line_separator"></div>
+  <a href = "/restaurant/restaurantManager/mesas"><img name = "mesas" src = "https://th.bing.com/th?id=OIP.x90ERrGDs5DxuTtF3b1-lAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
+  <span>Mesas</span>
+  </a>
+  <a class = "box"><img name = "clientes" src = "/static/Doming Icon client.png">
+    <h4>3 clientes</h4>
+  </a>
+  </div>
+  <div class = "page_main" name = "manager-main">
+    Lacro
+  </div>
+</section>
+  <div name = "class">Estatísticas</div>
+  <div name = "class">Clientes no restaurante</div>
+</header>
+<script src = "/static/resources/scripts-manager.js"></script>
+    <script src="scripts.js"></script>
+    </body>
+<html>
