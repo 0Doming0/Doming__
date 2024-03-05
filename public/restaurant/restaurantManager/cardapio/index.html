@@ -9,7 +9,7 @@
   <meta name="description" content="Gerencie o cardápio do seu negócio"/>
     <title>Meu negócio</title>
     
-    <link rel="stylesheet" type='text/css' href="styles.css">
+    <link rel="stylesheet" type='text/css' href="/restaurant/restaurantManager/cardapio/styles.css">
  </head>    
 <body>
     <!-- Barra de seleção principal -->
@@ -25,7 +25,7 @@
   <ul name = "Sopas">
     <div name = "page">
     <li><div name = "img"><span>Adicione uma imagem ao produto</span></div>
-      <a href = "/restaurant/restaurantManager/cardápio/editar-item">
+      <a href = "/Lacro/restaurantManager/cardapio/editar-item">
       <div name = "informação"><h4>Caldo verde</h4>
         <span>R$ 18.50</span>
       </div>
@@ -45,17 +45,17 @@
         </button>
       </div>
     </li>
-    <a name = "adicionar-item" href = "/Lacro/restaurantManager/cardápio/0"><li name = "adicionar-item" onclick = "pag_adicionar_item()"><h4>Adicione um item</h4></li></a>
+    <a name = "adicionar-item" href = "/Lacro/restaurantManager/cardapio/0"><li name = "adicionar-item" onclick = "pag_adicionar_item()"><h4>Adicione um item</h4></li></a>
     </div>
   </ul>
   <ul name = "Salgadinhos">
     <div name = "page">
-    <a href = "/Lacro/restaurantManager/cardápio/1"><li name = "adicionar-item" onclick = "pag_adicionar_item()"><h4>Adicione um item</h4></li></a>
+    <a href = "/Lacro/restaurantManager/cardapio/1"><li name = "adicionar-item" onclick = "pag_adicionar_item()"><h4>Adicione um item</h4></li></a>
     </div>
   </ul>
   <ul name = "Pipocas">
     <div name = "page">
-    <a href = "/Lacro/restaurantManager/cardápio/2"><li name = "adicionar-item" onclick = "pag_adicionar_item()"><h4>Adicione um item</h4></li></a>
+    <a href = "/Lacro/restaurantManager/cardapio/2"><li name = "adicionar-item" onclick = "pag_adicionar_item()"><h4>Adicione um item</h4></li></a>
     </div>
   </ul>
 </section>
@@ -78,7 +78,7 @@
   <a name = "options"onclick = "expandir_recolher(this)" class = "active_button"></a>
   <section name = "main">
   <div class = "page_main" name = "pages-main">
-  <a class = "active" href = "/restaurant/restaurantManager/cardápio"><img src = "https://th.bing.com/th?id=OIP.RnTUn1ifUKInjnOWN70V-AHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
+  <a class = "active" href = "/restaurant/restaurantManager/cardapio"><img src = "https://th.bing.com/th?id=OIP.RnTUn1ifUKInjnOWN70V-AHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
   <span>Cardápio</span>
   </a>
   <div class = "line_separator"></div>
@@ -89,18 +89,18 @@
   <a href = "/restaurant/restaurantManager/mesas"><img name = "mesas" src = "https://th.bing.com/th?id=OIP.x90ERrGDs5DxuTtF3b1-lAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
   <span>Mesas</span>
   </a>
-  <a class = "box"><img name = "clientes" src = "/static/Doming Icon client.png">
-    <h4>3 clientes</h4>
+  <a href = "/Lacro/restaurantManager/main" name = "restaurant-custom">
+    Personalize sua loja
   </a>
   </div>
   <div class = "page_main" name = "manager-main">
-    Lacro
+    Adicione, pause, remova e analize os produtos mais vendidos
   </div>
 </section>
   <div name = "class">Estatísticas</div>
   <div name = "class">Clientes no restaurante</div>
 </header>
 <script src = "/static/resources/scripts-manager.js"></script>
-    <script src="scripts.js"></script>
+    <script src="/restaurant/restaurantManager/cardapio/scripts.js"></script>
     </body>
 <html>

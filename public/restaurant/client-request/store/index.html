@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+  <head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Faça seu pedido</title>
+   <link rel='stylesheet' href="/restaurant/client-request/store/styles.css">
+  </head>
+<body>
+ <div class='block_r'>
+   <h2>Lacro<p>Sorveteria</p></h2>
+</div>
+<div id="status_order">
+   <h5>O garçom está vindo te atender.</h5>
+   <div>image</div>
+</div>
+<!-- controllers -->
+<header id='containers-info'>
+   <div name="notification" class ="notification_fixed_top">Garçom está vindo!
+</div>
+<div onclick = "pedido_toggle()" name="purchase-items" tabindex="0">
+   <h3 id='valor_confirmar'>R$ 0.00</h3>
+   <p>ver itens</p>
+</div> 
+<input type = "text" placeholder = "Olá. Tem fome de burgão?"/>
+</header>
+
+<!-- Gerar meus pedidos -->
+<div id = "meu-pedido_pag">
+ <div name = "title">Seus pedidos</div> 
+  
+ <div name = "offset_pag">
+ <section name="1">
+   <div><h4>categoria</h4></div>
+   <h4 name="valor">R$preço</h4>
+   <section tabindex="0">Mostrar itens</section>
+ </section>
+ </div>
+<h3 onclick = "pedido_toggle()">X</h3> 
+<section name = "meu-pedido_main">
+   <div name = "items-total"><h4>R$total </h4><span> 0 itens</span></div>
+   <a href="/restaurant/client-payment"><h4 name = "confirmar-compra" tabindex="0">Confirmar o pedido</h4></a>
+</section>
+</div> 
+
+<!-- Geração do cardápio -->
+ <section id="roll-page">
+ <div name = "page" value="1">
+   <section id="restaurante-main">
+      <li>Restaurante abre as 8 horas</li>
+      <li>Vendemos lanche e bebidas</li>
+      <li>Temos atendimento rápido com 5 garçons</li>
+      <div>imagem</div>
+   </section> 
+ </div>  
+  <div name = "page" value="2">
+   
+ </div> 
+</section>
+<script src="/restaurant/client-request/store/scripts.js"></script>
+
+</body>
+
+</html>

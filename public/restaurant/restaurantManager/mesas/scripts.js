@@ -57,10 +57,18 @@ function criar_mesas (list) {
         mesa_div.querySelector("p[name='title']").textContent = mesa
         let estado = list[mesa].estado ? "ocupada" : "disponível"
         mesa_div.querySelector("p[name='cliente']").textContent = estado
-        if (Adicionou_mesa)
+        if (Adicionou_mesa) {
           destacar_elemento(mesa_div, 6)
+          new nova_mesa_animation (mesa_div,estado)
+        }
         if (list[mesa].estado)
           mesa_div.classList.add("mesa_ocupada")
+        function nova_mesa_animation (mesa, estado) {
+            mesa.querySelector("p[name='cliente']").textContent = "Nova mesa criada!"
+            setTimeout(()=>{
+                mesa.querySelector("p[name='cliente']").textContent = estado
+            }, 6000)
+        }
     })
     section_main.style.display = "flex"
     main_info.textContent = "Atenda as chamadas dos clientes nas mesas"

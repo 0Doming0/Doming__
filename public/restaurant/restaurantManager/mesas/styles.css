@@ -113,7 +113,7 @@ section {
     }
 }
 .mesa_ocupada {
-    background-color:rgba(24, 132, 233, 0.616);
+    border-color: var(--green-color);
 }
 section[name = "main"] {gap:0.75rem;}
 section.section-page {display:none;}
@@ -122,16 +122,6 @@ section.section-page {display:none;}
     position:relative;
     width:30%;
     border-radius:50%;
-}.box div[name = "box-separator"] {
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    width:90%;
-    height:100%;
-    padding:5px;
-    border-radius:7px;
-}.box div[name = "box-separator"] p {
-    cursor:pointer;
 }
 #info-title {
     font-weight:500;
@@ -139,8 +129,10 @@ section.section-page {display:none;}
 }
 .section-info {
     display:block;
-    height:25px;
-    padding: 0px 0 0 0   
+    padding: 10px 0;   
+}
+.section-info h5 {
+    margin:0;
 }
 #create_mesa {
     display:flex;
@@ -149,7 +141,7 @@ section.section-page {display:none;}
     height: 30vh;
     margin-left:-8px;
     text-align:center;
-    background-image:linear-gradient(to bottom,white,rgba(244, 242, 242, 0.75));
+    background-color:red;
     border-top:1px dotted var(--dotted-color);
     border-bottom:1px solid var(--dotted-color);
     box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.142);

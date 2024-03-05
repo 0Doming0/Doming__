@@ -1,0 +1,19 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Rio de Janeiro",
+			"country": {
+				"code": "BR",
+				"name": "Brazil"
+			},
+			"subdivision": {
+				"code": "RJ",
+				"name": "Rio de Janeiro"
+			},
+			"timezone": "America/Sao_Paulo",
+			"latitude": -22.9201,
+			"longitude": -43.0811
+		},
+		"timestamp": 1709643145428
+	}
+}

@@ -9,12 +9,22 @@
   <meta name="description" content="Gerencie os pedidos do seu negócio"/>
     <title>Meu negócio</title>
     
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/restaurant/restaurantManager/main/styles.css">
  </head>    
   <body>
-    <div id = "qrCODE"></div>
+    <div id = "qrCODE">
+      <img src = "/static/qr code.jpg">
+      <div>
+      <a href = "/static/qr code.jpg" download>Baixar QRCODE</a>
+     
+      </div>
+    </div>
     <h4>Seu QrCode do seu negócio para começar a vender</h4>
     <div class = "line_separator"></div>
+    <div name = "restaurant-image">
+      <div style = "border: 1px solid black;border-radius:50%; width: 50%;padding-bottom:50%;"></div>
+      Coloque uma imagem para seu negócio
+    </div>
     <section class = "container-section">
       <div class = "container-lista">
         <div></div>
@@ -28,20 +38,7 @@
     <a name = "options"onclick = "expandir_recolher(this)" class = "active_button"></a>
     <section name = "main">
     <div class = "page_main" name = "pages-main">
-    <a href = "/restaurant/restaurantManager/cardápio"><img src = "https://th.bing.com/th?id=OIP.RnTUn1ifUKInjnOWN70V-AHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
-    <span>Cardápio</span>
-    </a>
-    <div class = "line_separator"></div>
-    <a class = "active" href = "/restaurant/restaurantManager/pedidos"><img name = "pedidos" src = "/static/Sem título.png">
-    <span>Pedidos</span>
-    </a>
-    <div class = "line_separator"></div>
-    <a href = "/restaurant/restaurantManager/mesas"><img name = "mesas" src = "https://th.bing.com/th?id=OIP.x90ERrGDs5DxuTtF3b1-lAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
-    <span>Mesas</span>
-    </a>
-    <a class = "box"><img name = "clientes" src = "/static/Doming Icon client.png">
-      <h4>3 clientes</h4>
-    </a>
+      Venda seus produtos com a ferramenta DOMING
     </div>
     <div class = "page_main" name = "manager-main">
       Seu negócio com Doming começa com os clientes acessando o QrCode
@@ -53,7 +50,7 @@
   </body>
     
     <script src = "/static/resources/scripts-manager.js"></script>
-    <script src="script.js"></script>
+    <script src="/restaurant/restaurantManager/main/script.js"></script>
     </body>
 
 

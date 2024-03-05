@@ -1,0 +1,78 @@
+@import url(/static/resources/styles-manager.css);
+body {
+    padding: 6.6rem 0 0;
+    text-align: center;
+}
+h4 {
+    margin: 0 0 15px;
+    font-weight:500;
+}
+header {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+}header .main {
+    display: flex;
+    align-items: center;
+    position:relative;
+    width: 100%;
+    height: 50px;
+    padding: 0 5px;
+    margin-top: 2.5rem;
+    color: var(--subtitle-color);
+}
+.main img {
+    display: block;
+    width:50px;;
+}header .main h4 {
+    position: static;
+    font-size: 19px;
+    font-weight:600;
+    color: var(--title-color);
+    
+}
+.main div[name = 'doming-info'] {
+    margin: 0;
+    display: block;
+    text-align: start;
+    padding: 0;
+}.main div[name = 'doming-info'] p {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+.main img {
+    width:40px;
+}
+
+.redirect {
+    display: block;
+    border: 1px solid black;
+    width: 100%;
+    padding: 0.5rem 0 1rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+.redirect p {
+    text-align:start;
+    margin:10px;
+}
+.redirect h4 {
+    background-color:var(--blue-color);
+    border-radius: 3px;
+    color: black;
+}
+
+.account-container img {
+    margin:10px;
+    width: 30px;
+}.account-container ul {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0;
+}.account-container a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
