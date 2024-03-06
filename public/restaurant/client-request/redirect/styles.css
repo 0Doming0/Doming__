@@ -35,15 +35,16 @@ header {
 .main div[name = 'doming-info'] {
     margin: 0;
     display: block;
-    text-align: start;
     padding: 0;
+    cursor:auto;
 }.main div[name = 'doming-info'] p {
-    font-size: 13px;
     margin: 0;
     padding: 0;
+    cursor:auto;
 }
 .main img {
     width:40px;
+    cursor:auto;
 }
 
 .redirect {

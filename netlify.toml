@@ -16,7 +16,7 @@ publish = "public"
   status = 200
 [[redirects]]
   from = "/"
-  to = "introduction-pages/main"
+  to = "introduction-pages/main/"
   status = 301
   force=true
 [[redirects]]

@@ -107,6 +107,92 @@ a{
     padding-bottom:80%;
     
 }
+#roll-page div[name='page'][value = '2'] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 5rem;
+}
+#roll-page div[name='page'][value = '2'] .container-separator {
+    width: 100%;
+    height: 20px;
+    margin: 5px 0 0;
+    background-color: rgba(0, 0, 0, 0.198);
+}
+#roll-page div[name='page'][value = '2'] input {
+    margin: 0.85rem 0;
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    border:1px solid var(--line-button);
+    text-align: center;
+}
+.container-categoria {
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    height:35px;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    border: 1px solid black;
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    transform: translate(-1px,-34px);
+    background-color: white;
+}.container-categoria h4 {
+    margin: 0;
+    width: 100%;
+    padding: 2px;
+    border-radius: 3px;
+    background-color: var(--blue-color);
+}
+.categoria-menu {
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 95%;
+    padding: 1rem 0;
+    margin-top: 1.5rem;
+    
+}
+.categoria-menu a {
+    display: block;
+    width:100%;
+    border-bottom: 1px dotted var(--dotted-color);
+    padding: 0;
+    margin: 0;
+}.categoria-menu div[name = 'image'] {
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height:70px;
+    padding: 0;
+    margin: 5px 0 0 5px;
+}.categoria-menu img {
+    width:70px;
+    padding: 0;
+    border-radius: 0.6rem;
+    border: 1px solid var(--line-button);
+}
+.categoria-menu a ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}.categoria-menu a ul span {
+    color: rgba(0, 0, 0, 0.789);
+    padding: 0 5px 0 7px;
+}
+.categoria-menu a h5 {
+    margin: 10px 0 0 5px;
+}.categoria-menu a h5[name="preço"] {
+    color: var(--green-color);
+    margin: 10px 5px 0 ;
+}
 .roll-lerp-car{
     animation-name:roll-lerp-car;
     animation-duration:0.68s;
@@ -271,13 +357,11 @@ a{
     border-radius: 0.55rem;
     border: none;
     text-align: center;
+    background-color: transparent;
 }
 #containers-info input:focus {
     border: none;
     outline: none;
-}
-#containers-info input:focus::-webkit-input-placeholder {
-    color:white;
 }
 #pag_width{
     width:100vh;
@@ -310,6 +394,7 @@ a{
 #containers-info div[name="purchase-items"] p{
     width:7ch;
     margin:0;
+
     cursor:pointer;
 }
 #containers-info div[name="purchase-items"] p:focus{
