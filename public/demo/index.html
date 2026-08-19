@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Doming — demonstração navegável de um produto digital para restaurantes, criado por Vitor Domingos." />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Doming — Product Demo</title>
+  <link rel="stylesheet" href="/demo/styles.css" />
+</head>
+<body>
+  <noscript>Ative o JavaScript para navegar pela demonstração do Doming.</noscript>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#overview" aria-label="Doming — início">
+        <img src="/static/Mini-Doming Icon.png" alt="Doming" />
+        <div><strong>Doming</strong><span>Product demo</span></div>
+      </a>
+
+      <div class="demo-badge"><span></span> Demo de portfólio · dados fictícios</div>
+
+      <nav class="nav-groups" aria-label="Navegação da demonstração">
+        <div class="nav-group">
+          <p>Projeto</p>
+          <a data-route="overview" href="#overview">Visão geral</a>
+          <a data-route="architecture" href="#architecture">Arquitetura & decisões</a>
+        </div>
+        <div class="nav-group">
+          <p>Experiência do cliente</p>
+          <a data-route="client-access" href="#client-access">Acesso do cliente</a>
+          <a data-route="store" href="#store">Loja / cardápio</a>
+          <a data-route="cart" href="#cart">Pedido</a>
+          <a data-route="payment" href="#payment">Pagamento</a>
+        </div>
+        <div class="nav-group">
+          <p>Gestão do restaurante</p>
+          <a data-route="manager" href="#manager">Dashboard</a>
+          <a data-route="tables" href="#tables">Mesas</a>
+          <a data-route="orders" href="#orders">Pedidos</a>
+          <a data-route="menu" href="#menu">Cardápio</a>
+          <a data-route="add-item" href="#add-item">Adicionar item</a>
+          <a data-route="edit-item" href="#edit-item">Editar item</a>
+        </div>
+        <div class="nav-group">
+          <p>Arquivo original</p>
+          <a data-route="legacy" href="#legacy">Todas as páginas de 2024</a>
+        </div>
+      </nav>
+
+      <footer class="sidebar-footer">
+        <a href="https://github.com/0Doming0/Doming__" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <small>Concebido e desenvolvido por Vitor Domingos.</small>
+      </footer>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" type="button" aria-label="Abrir navegação">☰</button>
+        <div>
+          <span class="eyebrow">CASE DE PRODUTO</span>
+          <strong id="routeTitle">Visão geral</strong>
+        </div>
+        <div class="topbar-actions">
+          <button class="ghost-button" id="resetDemo" type="button">Resetar demo</button>
+          <a class="primary-button compact" href="#client-access">Explorar produto</a>
+        </div>
+      </header>
+
+      <div class="page" id="page" tabindex="-1"></div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/demo/app.js"></script>
+</body>
+</html>
